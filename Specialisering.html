@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Specialisation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html" class="title">Home</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="generic.html" class="active">Generic</a></li> -->
+                <!-- <li><a href="elements.html">Elements</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <section id="main" class="wrapper">
+            <div class="inner">
+                    <h1 class="major">Car Controller in Unreal 5.0 with C++</h1>
+            </h1>
+            <h2>Introduction</h2>
+                <p>
+                    As an aspiring game developer, I embarked on a project to gain more hands-on experience with gameplay mechanics in Unreal Engine. My goal was to create a customizable car controller that would provide a unique and fun gameplay experience for players, inspired by my childhood memories of GTA cheat codes that allowed the player's car to fly. As the project progressed, I drew inspiration from the unique movement mechanics of Rocket League to further improve the controls and create a custom car controller that offers a distinct gameplay experience for players.
+                </p>
+
+                <h2>Development Process</h2>
+                <p>
+                    The project involved building a car from scratch, using a static mesh for the body and separate wheel meshes. Unreal Engine 5.0 and C++ were used to create the car controller. The project presented several challenges, including setting up the project, which took approximately one week, and resolving issues with Unreal Engine 5.1 crashing and becoming corrupt. Additionally, Visual Studio Intellisense wasn't functioning properly, leading me to switch to another IDE, Rider, which worked better for me. The most significant challenge I faced was the lengthy compile time, which took around two minutes to compile each time I changed a line of code. With a total of 60 hours of work spread across three weeks, the overall compile time amounted to approximately 1,200 minutes or 20 hours.
+                </p>
+            </div>
+        </section>
+        <section id="main" class="wrapper">
+            <div class="inner">
+                <h1 class="major">Car Controls</h1>
+                <p>
+                    The car controller's initial controls were designed with basic add force movements that allowed the car to move in the appropriate direction based on input. The controls were optimized to support the controller and utilized ray casting for ground checking. Subsequently, a boost feature was incorporated to increase the car's speed, and the aerial controls were refined to incorporate a Rocket League-style movement in the air. To facilitate this, I implemented a tilt function that enabled the car to rotate backward and forward by 360 degrees, along with a roll function to turn the car sideways. These enhancements addressed the issue of the car landing on its back on the ground, resulting in a controller that offered a seamless transition between ground and air movements, akin to a car and a plane, respectively.
+                </p>
+                <img src="Videos/Special-Flip.gif" alt="image description" width="400" height="200">
+                <img src="Videos/Special-Roll.gif" alt="image description" width="400" height="200">
+                <img src="Videos/Special-FlyingAround.gif" alt="image description" width="400" height="200">
+            </div>
+        </section>
+        <section id="main" class="wrapper">
+            <div class="inner">
+                <h1 class="major">Wheels</h1>
+
+                <p>
+                    I implemented rotation logic to enable the wheels, which were separate meshes from the car, to rotate realistically when the car is driven. Additionally, I incorporated logic to allow the wheels to turn left and right based on the player's input, along with implementing suspension logic. 
+                </p>
+                <span class="image fit">
+                    <video src="Videos/Speci-Wheels.mp4" type="video/mp4" autoplay loop muted width="600"
+                        height="300"></video>
+                </span>
+                <p>
+                    The suspension logic code simulates the wheels' movement and their interaction with the ground, and it operates by executing a line trace from the wheel to the ground, detecting any blocking hits.
+
+                    When a hit is detected, the code determines the spring length between the wheel and the hit point and applies spring and damper forces based on the difference between the current and previous spring lengths. Ultimately, the resulting forces are applied to the car's body mesh at the location of the wheel. Conversely, if no blocking hit is detected, the spring length is assigned to its maximum value, indicating that the wheel is not in contact with the ground.
+                    
+                    The suspension logic code plays a crucial role in generating a realistic simulation of the car's movement and its interaction with the environment. By using this implementation, the car's movement emulates that of a real vehicle, making for a more immersive gaming experience.
+                </p>
+                <img src="images/SpeciSetup.png" alt="image description" width="600" height="400">
+
+            </div>
+        </section>
+        <section id="main" class="wrapper">
+            <div class="inner">
+                <h1 class="major">Conclusion</h1>
+                <p>
+                    My extensive work on a custom car controller within Unreal Engine was a challenging but rewarding experience that showcased my expertise in game development. 
+                    The controller boasts fundamental controls for ground movement and advanced aerial controls that diverge from traditional GTA mechanics, 
+                    with inspiration from Rocket League's movements. Notably, the controller features separate wheel meshes, with intricate rotation logic that responds to user input, 
+                    alongside suspension logic that accurately simulates a suspension system's operation.
+                </p>
+                <p>
+                    Throughout the project, I gained a better understanding of Unreal Engine and the intricacies of developing an engaging gameplay experience. 
+                    As I continue to refine and enhance the controller, I aim to optimize camera controls for maximum player immersion, 
+                    fine-tune the glide of the car on the ground, and improve the aerial controls further.
+                </p>
+                <p>
+                    Although Unreal Engine was new to me, I successfully adapted and showcased my skills in game development. 
+                    However, the end product did not reach its full potential, 
+                    and I am eager to continue refining the controller to create an even more polished and versatile product.
+                </p>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer id="footer" class="wrapper alt">
+            <div class="inner">
+                    <a href="index.html">Home</a>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
